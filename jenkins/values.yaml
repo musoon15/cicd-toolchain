@@ -29,4 +29,3 @@ agent:
 
 serviceAccount:
   create: false
-expo
