@@ -1,6 +1,6 @@
 controller:
   image: "harbor.cloudbrg.com/cicd/jenkins/jenkins"
-  tag: "latest"
+  tag: "lts"
   #image: "harbor.gantry.ai/cicd/jenkins/jenkins"
   #tag: "2.289.3-jdk11"
   imagePullSecretName: harbor-cred
@@ -29,3 +29,4 @@ agent:
 
 serviceAccount:
   create: false
+expo
