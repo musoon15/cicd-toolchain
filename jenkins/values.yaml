@@ -1,6 +1,6 @@
 controller:
-  image: "harbor.cloudbrg.com/cicd/jenkins/jenkins"
-  tag: "latest"
+  image: "harbor.itpartime.com/cicd/jenkins/jenkins"
+  tag: "lts"
   #image: "harbor.gantry.ai/cicd/jenkins/jenkins"
   #tag: "2.289.3-jdk11"
   imagePullSecretName: harbor-cred
@@ -18,12 +18,12 @@ controller:
       # jcasc changes will cause a reboot and will only be applied at the subsequent start-up.  Auto-reload uses the
       # http://<jenkins_url>/reload-configuration-as-code endpoint to reapply config when changes to the configScripts are detected.
       enabled: true
-      image: "harbor.cloudbrg.com/cicd/kiwigrid/k8s-sidecar:1.12.2"
+      image: "harbor.itpartime.com/cicd/kiwigrid/k8s-sidecar:1.12.2"
       imagePullPolicy: IfNotPresent
 
 agent:
   enabled: true
-  image: "harbor.cloudbrg.com/cicd/jenkins/inbound-agent"
+  image: "harbor.itpartime.com/cicd/jenkins/inbound-agent"
   tag: "latest"
   #tag: "4.6-1"
 
